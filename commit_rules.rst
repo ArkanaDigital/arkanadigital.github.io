@@ -26,7 +26,28 @@ the branch's purpose is. The format could include the creator's name, the type
 of change (feature, bugfix, etc.), and a brief description.
 
 Example:
-<author>/feature/add-login-button
+feature/sale_order_tax_adjustment
+
+Protect the main branches
+=========================
+
+Main branches (like master or main) should be protected. That means no direct pushes - all changes should go through code review.
+
+Example:
+
+.. code-block:: vim
+
+    # Avoid:
+    git checkout main
+    git commit -m "A quick fix"
+    git push origin main
+    
+    # Instead, use:
+    git checkout -b fix/sale_order_quick_fix
+    # make changes
+    git commit -m "Fix for sale order"
+    git push origin fix/sale_order_quick_fix
+    Then open a pull request for the changes to be reviewed.
 
 Always use pull requests for changes
 ====================================
@@ -84,9 +105,13 @@ Create a .gitignore file in your project root with the following content:
 
 .. code-block:: bash
 
-    *.log
-    .DS_Store
-    node_modules/
+    # .gitignore
+    *.pyc
+    *.pyo
+    *.csv
+    env/
+    __pycache__/
+    *.pot
 
 Atomic commits
 ==============
