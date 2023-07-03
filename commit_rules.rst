@@ -150,7 +150,16 @@ Then, for each branch run:
     export BRANCH=16.0
     git checkout -b $BRANCH
 
-then after checkout new breanch you can commit your code
+then after checkout new breanch you can commit your code after adding some files/code.
+You have to put your requirements.txt if you have external dependencies, create requirements.txt
+by executing following command:
+
+.. code-block:: bash
+
+    touch requirements.txt
+
+then you can edit with your favorite editors like vim, pico or nano, after editing your file
+you can add and commit it
 
 .. code-block:: bash
 
