@@ -380,6 +380,7 @@ following two lines at the end of the file:
 /etc/odoo.conf
 
 .. code-block:: vim
+
     xmlrpc_interface = 127.0.0.1
     netrpc_interface = 127.0.0.1
 
