@@ -352,6 +352,7 @@ Next, we need to tell Odoo to use the proxy. To do so, open the configuration fi
 add the following line:
 
 /etc/odoo.conf
+
 .. code-block:: vim
 
     proxy_mode = True
