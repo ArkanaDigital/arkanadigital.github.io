@@ -1,24 +1,60 @@
 # Project - Project Name
 Project Name - Customer Name
 
+## Workflow for Technical member
+- Decide 'main' branch on servers:
+  Contoh: 17.0, 17.0-staging, 17.0-development
+- Before doing development, checkout from 'main' branch. Please pay attention to 'Naming Branch'-rule.
+- Flag development status 'In Progress' on developer task list / requirement list / FSD list / etc
+- Use pre-commit before commit, please discuss pre-commit ignore if needed.
+- Testing feature on localhost
+- Create new 'Pull Request' from branch feature/ improvement/ fix/ refactor to destinated branch. If there is more than one server, staging and production, do PR from feature to development, after tested do PR from feature to main branch.
+- Flag development status 'Pull Request' on developer task list / requirement list / FSD list / etc
+
+## Workflow for Lead Technical
+- Start repository with copier and pre-commit (example: https://github.com/ArkanaDigital/addons-repo-template).
+- New repository must contain readme.md (this template), requirements.txt, and .pre-commit-config.yaml file decided by team member.
+- Invite all technical member to new repository
+- Manage PR created by technical member
+- Deploy to servers and update the development status to QC / Deploy / Done
+
 # Naming Branch
 Berikut adalah konvensi penamaan branch yang digunakan dalam proyek ini:
 
 - `feat-nama_feature`: Digunakan untuk branch yang menambahkan fitur baru.  
-  Contoh: `feat-tambah_login`
+  Example: `17.0-feat-tambah_login`
 
 - `imp-feature_apa`: Digunakan untuk branch yang melakukan peningkatan pada fitur yang sudah ada.  
-  Contoh: `imp-optimalisasi_kinerja_login`
+  Example: `17.0-imp-optimalisasi_kinerja_login`
 
 - `fix-feature_apa`: Digunakan untuk branch yang memperbaiki bug.  
-  Contoh: `fix-perbaikan_bug_login`
+  Example: `17.0-fix-perbaikan_bug_login`
 
 - `refactor-feature_apa`: Digunakan untuk branch yang melakukan refactoring kode tanpa mengubah fungsionalitas.  
-  Contoh: `refactor-login_module`
+  Example: `17.0-refactor-login_module`
 
 ## Repo Odoo that Used for Development :
-- [Download] ODOO CE (https://drive.google.com/file/d/1qkucGxsTeGERVff0CRP1BePWf8FhuApU/view?usp=sharing / github repo url)
-- [Download] ODOO EE (https://drive.google.com/file/d/1qkucGxsTeGERVff0CRP1BePWf8FhuApU/view?usp=sharing / github repo url)
+- [Download] ODOO CE (https://drive.google.com/file/d/1qkucGxsTeGERVff0CRP1BePWf8FhuApU/view?usp=sharing or github repo url on specific active branch & specific commits)
+- [Download] ODOO EE (https://drive.google.com/file/d/1qkucGxsTeGERVff0CRP1BePWf8FhuApU/view?usp=sharing or github repo url on specific active branch & specific commits)
+- Extra repository: github repo url (bulog_extra, modinity_extra, etc.)
+
+## Database backup:
+- [Download] Database backup per 03/09/2024 (google drive url)
+
+## VSCode Configuration:
+- Example of vscode configuration on workspace files:
+  "settings": {
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Args": ["--ignore=E501,E301,E302"],
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[xml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
 ## Other Required Package that Used for Development :
 - **Python** : Python 3.12
