@@ -43,18 +43,22 @@ Berikut adalah konvensi penamaan branch yang digunakan dalam proyek ini:
 
 ## VSCode Configuration:
 - Example of vscode configuration on workspace files:
-  "settings": {
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.flake8Args": ["--ignore=E501,E301,E302"],
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[xml]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  ```Python
+  {
+    "settings": {
+      "python.linting.pylintEnabled": false,
+      "python.linting.flake8Enabled": true,
+      "python.linting.lintOnSave": true,
+      "python.linting.flake8Args": ["--ignore=E501,E301,E302"],
+      "python.formatting.provider": "black",
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": false,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "[xml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+  }
+  ```
 
 ## Other Required Package that Used for Development :
 - **Python** : Python 3.12
